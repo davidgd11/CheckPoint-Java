@@ -23,21 +23,21 @@ public class UsaGeometria {
 			if (escolha == 1) {
 				System.out.println("Digite o valor do lado do quadrado: ");
 				geo.setBase(scan.nextFloat());
-				geo.calcularAreaQuadrado();
+				geo.calcularAreaQuadrado(geo.getBase());
 			} else if (escolha == 2) {
 				System.out.println("Digite o valor da base e da altura do retângulo: ");
 				geo.setBase(scan.nextFloat());
 				geo.setAltura(scan.nextFloat());
-				geo.calcularAreaRetangulo(); 
+				geo.calcularAreaRetangulo(geo.getBase(), geo.getAltura()); 
 			} else if (escolha == 3) {
 				System.out.println("Digite o valor da base e da altura do triângulo: ");
 				geo.setBase(scan.nextFloat());
 				geo.setAltura(scan.nextFloat());
-				geo.calcularAreaTriangulo(); 
+				geo.calcularAreaTriangulo(geo.getBase(), geo.getAltura()); 
 			} else if (escolha == 4) {
 				System.out.println("Digite o valor do raio do circulo: ");
 				geo.setRaio(scan.nextDouble());
-				geo.calcularAreaCirculo();
+				geo.calcularAreaCirculo(geo.getRaio());
 			} else {
 				System.out.println("Opção incorreta.");
 			}
@@ -45,7 +45,6 @@ public class UsaGeometria {
 			System.out.println(e.getMessage());
 		}
 		
-		}
-		
 	}
-
+	
+}
